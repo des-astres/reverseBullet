@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     //private InputActionReference resetActionReference;
     private InputActionReference moveActionReference;
     [SerializeField]
-    private float speed = 5.0f;
+    private float speed = 7.0f;
 
     private Vector3 A;
     private Vector3 B;
