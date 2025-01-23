@@ -11,6 +11,12 @@ public class EnemySpawner : MonoBehaviour
         InvokeRepeating("Spawn", 2.0f, 2.0f);
     }
 
+    /*
+    private void setPlayer()
+    {
+        _player = player;
+    }*/
+
     void Spawn()
     {
         Vector3 Position = startPosition + Random.insideUnitSphere * 5;
