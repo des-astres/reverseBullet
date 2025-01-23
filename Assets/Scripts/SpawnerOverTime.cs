@@ -1,15 +1,17 @@
 using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class SpawnerOverTime : MonoBehaviour
 {
     [SerializeField]
+    private UnityEngine.UI.Button startButton;
+    [SerializeField]
     private float timePeriod;
     [SerializeField]
     private GameObject spawner;
-    [SerializeField]
-    private GameObject player;
 
     void Start()
     {
@@ -19,14 +21,6 @@ public class SpawnerOverTime : MonoBehaviour
     // Coroutine
     private IEnumerator SpawnCoroutine()
     {
-        // Exemples de conditions
-        /*CreateSpawner();
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForSeconds(10);
-        yield return new WaitUntil(() => isNewSpawnRequest);
-        isNewSpawnRequest = false;
-        CreateSpawner();*/
-
         while (true)
         {
             CreateSpawner();
@@ -34,16 +28,10 @@ public class SpawnerOverTime : MonoBehaviour
         }
     }
 
-    /*
-    public void RequestNewSpawner()
-    {
-        isNewSpawnRequest = true;
-    }*/
     private void CreateSpawner()
     {
         var spawnerInstance = Instantiate(spawner, transform);
         var enemiesSpawner = spawnerInstance.GetComponent<EnemySpawner>();
-        // enemiesSpawner.SetPlayer(player.transform);
     }
 
     public void StopSpawning()
