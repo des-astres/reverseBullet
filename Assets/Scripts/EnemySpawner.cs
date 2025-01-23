@@ -5,7 +5,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Enemy;
     public Vector3 startPosition = new Vector3(0, 0, 0);
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InvokeRepeating("Spawn", 2.0f, 2.0f);
