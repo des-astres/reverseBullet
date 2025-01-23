@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject Enemy;
-    public Vector3 startPosition = new Vector3(0, 0, 0);
+    public Vector3 startPosition = new Vector3(-5, 100, 0);
 
     void Start()
     {

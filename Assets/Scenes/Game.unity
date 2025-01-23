@@ -377,6 +377,60 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &434848190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434848191}
+  - component: {fileID: 434848192}
+  m_Layer: 0
+  m_Name: playerAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434848191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434848190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.27188903, y: -1.4895002, z: 0.40707582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &434848192
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434848190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7876fbdf3fa94b745b3c11653842c00b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +696,7 @@ PrefabInstance:
       addedObject: {fileID: 4034530229184049336}
     - targetCorrespondingSourceObject: {fileID: 2732451269801920691, guid: d4ddfbadf69b8ba448cea660ffc406b1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4034530229184049337}
+      addedObject: {fileID: 4034530229184049340}
   m_SourcePrefab: {fileID: 100100000, guid: d4ddfbadf69b8ba448cea660ffc406b1, type: 3}
 --- !u!1 &4034530229184049330 stripped
 GameObject:
@@ -661,6 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbcd7aeb3f2ff24e9d99b3e7bd68f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 434848192}
   moveActionReference: {fileID: -6994148489448437220, guid: 9dc36996f63f4b7459cc43ea56244004, type: 3}
   speed: 7
 --- !u!23 &4034530229184049333
@@ -723,7 +778,7 @@ MonoBehaviour:
   projectile: {fileID: 2231228011486699752, guid: 5a8298adcffdfc9429b2813c31709715, type: 3}
   launchVelocity: 10000
   ship: {fileID: 4034530229184049330}
---- !u!95 &4034530229184049337
+--- !u!95 &4034530229184049340
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -755,3 +810,4 @@ SceneRoots:
   - {fileID: 1358224613}
   - {fileID: 1952271483}
   - {fileID: 4034530229184049329}
+  - {fileID: 434848191}
